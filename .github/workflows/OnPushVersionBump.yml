@@ -18,7 +18,7 @@ jobs:
       id: check-patch
       run: |
           shopt -s nocasematch
-          if [[ ${{ github.event.head_commit.message }} =~ ^\[(bugfix|patch|fix|refactor|perf)\] ]]; then
+          if [[ "${{ github.event.head_commit.message }}" =~ ^\[(bugfix|patch|fix|refactor|perf)\] ]]; then
             echo ::set-output name=match::true
           fi
 
