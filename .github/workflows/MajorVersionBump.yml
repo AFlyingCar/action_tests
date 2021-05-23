@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v2
+
     - name: Bump the version number
       run: sh "$GITHUB_WORKSPACE/tools/versionbump.sh" "$GITHUB_WORKSPACE" 1
 
